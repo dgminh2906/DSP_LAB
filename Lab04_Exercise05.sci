@@ -1,7 +1,7 @@
 // Load an image
 image = imread("image.png");
 
-// Get values of red, green, and blue component
+// Extract RGB Components
 im_red = image(:, :, 1);
 im_green = image(:, :, 2);
 im_blue = image(:, :, 3);
@@ -16,19 +16,19 @@ blue_hist = imhist(im_blue);
 gray_hist = imhist(im_gray);
 
 
-// Plot each histogram
-subplot(221);
+// Plot histogram
+subplot(2,2,1);
 plot2d3([0:255], red_hist, 5);
 xtitle("Red histogram");
 
-subplot(222);
+subplot(2,2,2);
 plot2d3([0:255], green_hist, 3);
 xtitle("Green histogram");
 
-subplot(223);
-plot2d3([0:255], blue_hist', 2);
+subplot(2,2,3);
+plot2d3([0:255], blue_hist, 2);
 xtitle("Blue histogram");
 
-subplot(224);
-plot2d3([0:255], gray_hist);
+subplot(2,2,4);
+plot2d3([0:255], gray_hist, 1);
 xtitle("Grayscale levels histogram");
