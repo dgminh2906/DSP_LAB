@@ -84,8 +84,8 @@ function [yn, yorigin] = convolution(xn, xorigin, hn, horigin)
     yorigin = -nmin + 1;
 endfunction
 
-hn = [1 2 1 -1]
+hn = [2 3 1 -2]
 horigin = 2
-xn = [1 2 3 1]
+xn = [0 2 4 1]
 xorigin = 1
 [yn, yorigin] = convolution(xn, xorigin, hn, horigin)
